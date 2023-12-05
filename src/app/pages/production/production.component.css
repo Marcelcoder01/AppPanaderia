@@ -1,0 +1,27 @@
+.contenedor{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-image: url("../../../assets/img/fondo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tabla{
+  margin-top: 20px;
+  width: 60%;
+}
+
+.btn-beige-dark {
+  background-color: #b59d82;
+  color: #fff;
+
+}
+
+.btn-beige-dark:hover{
+  background-color: #5e5142;
+
+}

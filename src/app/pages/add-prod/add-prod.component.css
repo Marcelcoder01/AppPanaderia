@@ -1,0 +1,38 @@
+.contenedor{
+  background-image: url("../../../assets/img/fondo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.formulario{
+  height:500px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.formulario form{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.formulario form button{
+  width: 50%;
+  margin-top: 30px;
+
+}
+
+.btn-beige-dark {
+  background-color: #b59d82;
+  color: #fff;
+
+}
+
+.btn-beige-dark:hover{
+  background-color: #5e5142;
+
+}

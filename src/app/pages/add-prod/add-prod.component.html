@@ -1,0 +1,13 @@
+<div class="contenedor">
+  <br>
+  <h2>Añade una nueva producción rellenando los campos:</h2>
+  <div class="formulario" >
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+      <input type="date" name="fecha" formControlName="fecha">
+      <input type="number" name="cantidad" placeholder="Cantidad" formControlName="cantidad">
+      <div class="boton">
+        <button class="btn btn-beige-dark">Crear</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="contenedor">
+  <div class="title">
+    <br>
+    <h1>Consulta la producción</h1>
+    <h3>Buscar por fechas: </h3>
+  </div>
+<br>
+  <div class="fechas">
+    <!-- Aquí hacemos un two way binding para recoger los parámtros date1 y date2, que luego se enviarán al servicio -->
+    Entre
+    <input type="date" placeholder="Fecha" [(ngModel)]="date1">
+    y
+    <input type="date" placeholder="Fecha" [(ngModel)]="date2">
+
+  </div>
+<br>
+<br>
+<button (click)="Search(date1, date2)" class="btn btn-beige-dark">Buscar</button>
+<div class="tabla">
+  <table class="table" >
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Cantidad</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of production">
+      <!-- Aquí interpolamos con los parámetros del array production del componente, que viene a su vez del servicio ,
+      y este de la base de datos SQL -->
+      <tr>
+        <td>{{item.id}}</td>
+        <!-- en el parámetro fecha debemos hacer un pipe para que nos de solo la fecha y no la hora -->
+        <td>{{ item.fecha | date: 'yyyy-MM-dd' }}</td>
+        <td>{{item.cantidad}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+</div>
